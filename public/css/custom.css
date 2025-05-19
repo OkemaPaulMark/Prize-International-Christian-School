@@ -1,0 +1,22 @@
+:root {
+    --primary: #198754;
+    --success: #198754;
+  }
+  
+  /* Override Bootstrap classes directly */
+  .btn-primary,
+  .bg-primary,
+  .text-primary {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: #fff !important;
+  }
+  
+  .btn-success,
+  .bg-success,
+  .text-success {
+    background-color: var(--success) !important;
+    border-color: var(--success) !important;
+    color: #fff !important;
+  }
+  
