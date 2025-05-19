@@ -19,107 +19,106 @@
 
     <!-- Content Row -->
     <div class="row">
-  <div class="container-fluid py-4">
-    <div class="row min-vh-80 h-100">
-      <div class="col-12">
-        <div class="row">
-          <!-- Registered Users -->
-          <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-            <div class="card shadow">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-9">
-                    <i class="fas fa-users-cog fa-2x text-primary"></i>
-                  </div>
-                  <div class="col-3">
-                    <div class="icon icon-box-primary">
-                      <span class="mdi mdi-arrow-top-right icon-item"></span>
+      <div class="container-fluid py-4">
+        <div class="row min-vh-80 h-100">
+          <div class="col-12">
+            <div class="row">
+              <!-- Registered Users -->
+              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card shadow">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-9">
+                        <i class="fas fa-users-cog fa-2x text-primary"></i>
+                      </div>
+                      <div class="col-3">
+                        <div class="icon icon-box-primary">
+                          <span class="mdi mdi-arrow-top-right icon-item"></span>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <h5 class="text-muted font-weight-normal">Registered Users</h5>
-                <div class="d-flex align-items-center align-self-start">
-                  <h3 class="mb-0">0</h3>
-                </div>
-                <p>All users registered to the website.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Feedbacks -->
-          <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-            <div class="card shadow">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-9">
-                    <i class="fas fa-comments fa-2x text-success"></i>
-                  </div>
-                  <div class="col-3">
-                    <div class="icon icon-box-success">
-                      <span class="mdi mdi-arrow-top-right icon-item"></span>
+                    <h5 class="text-muted font-weight-normal">Registered Users</h5>
+                    <div class="d-flex align-items-center align-self-start">
+                      <h3 class="mb-0">{{ $userCount }}</h3>
                     </div>
+                    <p>All users registered to the website.</p>
                   </div>
                 </div>
-                <h5 class="text-muted font-weight-normal">Feedbacks</h5>
-                <div class="d-flex align-items-center align-self-start">
-                  <h3 class="mb-0">0</h3>
-                </div>
-                <p>Feedback submitted by students or parents.</p>
               </div>
-            </div>
-          </div>
 
-          <!-- Newsletter Subscribers -->
-          <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-            <div class="card shadow">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-9">
-                    <i class="fas fa-envelope-open-text fa-2x text-warning"></i>
-                  </div>
-                  <div class="col-3">
-                    <div class="icon icon-box-warning">
-                      <span class="mdi mdi-arrow-top-right icon-item"></span>
+              <!-- Feedbacks -->
+              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card shadow">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-9">
+                        <i class="fas fa-comments fa-2x text-success"></i>
+                      </div>
+                      <div class="col-3">
+                        <div class="icon icon-box-success">
+                          <span class="mdi mdi-arrow-top-right icon-item"></span>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <h5 class="text-muted font-weight-normal">Newsletter</h5>
-                <div class="d-flex align-items-center align-self-start">
-                  <h3 class="mb-0">0</h3>
-                </div>
-                <p>Newsletters added by the admin.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Board Members -->
-          <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-            <div class="card shadow">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-9">
-                    <i class="fas fa-user-tie fa-2x text-danger"></i>
-                  </div>
-                  <div class="col-3">
-                    <div class="icon icon-box-danger">
-                      <span class="mdi mdi-arrow-top-right icon-item"></span>
+                    <h5 class="text-muted font-weight-normal">Feedbacks</h5>
+                    <div class="d-flex align-items-center align-self-start">
+                      <h3 class="mb-0">{{ $feedbackCount }}</h3>
                     </div>
+                    <p>Feedback submitted by students or parents.</p>
                   </div>
                 </div>
-                <h5 class="text-muted font-weight-normal">Board Members</h5>
-                <div class="d-flex align-items-center align-self-start">
-                  <h3 class="mb-0">0</h3>
-                </div>
-                <p>Registered school board members.</p>
               </div>
-            </div>
-          </div>
 
-        </div><!-- /.row -->
+              <!-- Newsletter Subscribers -->
+              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card shadow">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-9">
+                        <i class="fas fa-envelope-open-text fa-2x text-warning"></i>
+                      </div>
+                      <div class="col-3">
+                        <div class="icon icon-box-warning">
+                          <span class="mdi mdi-arrow-top-right icon-item"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <h5 class="text-muted font-weight-normal">Newsletter</h5>
+                    <div class="d-flex align-items-center align-self-start">
+                      <h3 class="mb-0">{{ $newsletterCount }}</h3>
+                    </div>
+                    <p>Newsletters added by the admin.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Board Members -->
+              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card shadow">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-9">
+                        <i class="fas fa-user-tie fa-2x text-danger"></i>
+                      </div>
+                      <div class="col-3">
+                        <div class="icon icon-box-danger">
+                          <span class="mdi mdi-arrow-top-right icon-item"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <h5 class="text-muted font-weight-normal">Board Members</h5>
+                    <div class="d-flex align-items-center align-self-start">
+                      <h3 class="mb-0">{{ $boardMemberCount }}</h3>
+                    </div>
+                    <p>Registered school board members.</p>
+                  </div>
+                </div>
+              </div>
+            </div><!-- /.row -->
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
 
 @endsection

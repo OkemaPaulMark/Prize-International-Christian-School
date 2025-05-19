@@ -59,14 +59,18 @@
                         <td>{{ Str::limit($newsletter->description, 90) }}</td>
                         <td><img src="{{ asset($newsletter->image) }}" class="img-thumbnail" width="80"></td>
                         <td>
-                            <a href="#" class="btn btn-info btn-sm">View</a>
-                            <a href="#" class="btn btn-warning btn-sm">Edit</a>
+                                <a href="{{ route('newsletter.show', $newsletter->id) }}" class="btn btn-success btn-sm">
+                                    <i class="fas fa-eye"></i> View
+                                </a>
+                              <a href="{{ route('newsletter.edit', $newsletter->id) }}" class="btn btn-warning btn-sm">
+                                    <i class="fas fa-edit"></i> Edit
+                                </a>
                             <form action="{{ route('newsletter.destroy', $newsletter->id) }}" method="POST" style="display:inline;">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger btn-sm"
                                         onclick="return confirm('Are you sure you want to delete this newsletter?')">
-                                    Delete
+                                    <i class="fas fa-trash-alt"></i> Delete
                                 </button>
                             </form>
                         </td>

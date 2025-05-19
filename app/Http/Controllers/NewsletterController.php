@@ -51,9 +51,10 @@ class NewsletterController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
-        //
+        $newsletter = Newsletter::findOrFail($id);
+        return view('admin.dashboard.newsletter.show', compact('newsletter'));
     }
 
     /**
@@ -62,29 +63,42 @@ class NewsletterController extends Controller
     public function edit($id)
     {
         $newsletter = Newsletter::findOrFail($id);
-        return view('admin.dashboard.edit', compact('newsletter'));
+        return view('admin.dashboard.newsletter.edit', compact('newsletter'));
     }
     
     public function update(Request $request, $id)
     {
         $request->validate([
             'title' => 'required|string|max:255',
-            'description' => 'required',
-            'image' => 'nullable|image|mimes:jpg,jpeg,png,gif|max:2048',
+            'description' => 'required|string',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048'
         ]);
-    
+
         $newsletter = Newsletter::findOrFail($id);
-    
-        $data = $request->only('title', 'description');
-    
+        
+        $data = [
+            'title' => $request->title,
+            'description' => $request->description,
+        ];
+
+        // Handle image upload if new image is provided
         if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('assets/img/newsletter', 'public');
-            $data['image'] = 'storage/' . $imagePath;
+            // Delete old image if exists
+            if ($newsletter->image && file_exists(public_path($newsletter->image))) {
+                unlink(public_path($newsletter->image));
+            }
+            
+            // Store new image (consistent with your store method)
+            $file = $request->file('image');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('assets/img/newsletters'), $filename);
+            $data['image'] = 'assets/img/newsletters/' . $filename;
         }
-    
+        
         $newsletter->update($data);
-    
-        return redirect()->route('newsletters.index')->with('success', 'Newsletter updated successfully!');
+        
+        return redirect()->route('newsletter.index')
+                    ->with('success', 'Newsletter updated successfully');
     }
 
     /**

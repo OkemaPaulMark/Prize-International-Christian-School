@@ -50,16 +50,18 @@
                         <td>{{ $member->phone_number }}</td>
                         <td><img src="{{ asset($member->image) }}" class="img-thumbnail" width="80"></td>
                         <td>
-                            <a href="#" class="btn btn-info btn-sm">View</a>
-                            <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editBoardMemberModal{{ $member->id }}">
-                                Edit
-                            </button>
+                                <a href="{{ route('boardmembers.show', $member->id) }}" class="btn btn-success btn-sm">
+                                    <i class="fas fa-eye"></i> View
+                                </a>
+                                <a href="{{ route('boardmembers.edit', $member->id) }}" class="btn btn-warning btn-sm">
+                                    <i class="fas fa-edit"></i> Edit
+                                </a>
                             <form action="{{ route('boardmembers.destroy', $member->id) }}" method="POST" style="display:inline;">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger btn-sm"
                                         onclick="return confirm('Are you sure you want to delete this board member?')">
-                                    Delete
+                                    <i class="fas fa-trash-alt"></i> Delete
                                 </button>
                             </form>
                         </td>

@@ -51,14 +51,16 @@
                             <td>{{ $feedback->subject }}</td>
                             <td>{{ Str::limit($feedback->message, 40) }}</td>
                             <td>
-                                <a href="#" class="btn btn-info btn-sm">View</a>
-                                <a href="#" class="btn btn-warning btn-sm">Edit</a>
+                            <a href="{{ route('feedbacks.show', $feedback->id) }}" 
+                            class="btn btn-success btn-sm ">
+                                <i class="fas fa-eye"></i> View
+                            </a>
                                 <form action="{{ route('feedbacks.destroy', $feedback->id) }}" method="POST" style="display:inline;">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger btn-sm"
                                         onclick="return confirm('Are you sure you want to delete this feedback? This action cannot be undone!')">
-                                        Delete
+                                        <i class="fas fa-trash-alt"></i> Delete
                                     </button>
                                 </form>
                             </td>

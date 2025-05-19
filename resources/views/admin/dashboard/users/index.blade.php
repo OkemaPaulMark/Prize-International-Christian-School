@@ -49,14 +49,12 @@
                             <td>{{ $user->email }}</td>
                             <td>{{ $user->created_at->format('Y-m-d') }}</td>
                             <td>
-                                <a href="#" class="btn btn-info btn-sm">View</a>
-                                <a href="#" class="btn btn-warning btn-sm">Edit</a>
                                 <form action="{{ route('users.destroy', $user->id) }}" method="POST" style="display:inline;">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger btn-sm"
                                         onclick="return confirm('Are you sure you want to delete this user? This action cannot be undone!')">
-                                        Delete
+                                        <i class="fas fa-trash-alt"></i> Delete
                                     </button>
                                 </form>
                             </td>

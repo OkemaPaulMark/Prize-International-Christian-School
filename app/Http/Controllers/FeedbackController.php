@@ -53,9 +53,10 @@ class FeedbackController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
-        //
+        $feedback = Feedback::findOrFail($id);
+        return view('admin.dashboard.feedbacks.show', compact('feedback'));
     }
 
     /**

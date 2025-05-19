@@ -56,27 +56,60 @@ class MembersController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
-        //
+        $member = BoardMember::findOrFail($id);
+        return view('admin.dashboard.boardmembers.show', compact('member'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($id)
     {
-        //
+        $member = BoardMember::findOrFail($id);
+        return view('admin.dashboard.boardmembers.edit', compact('member'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
-        //
-    }
+        $request->validate([
+            'name' => 'required|string',
+            'title' => 'required|string',
+            'phone_number' => 'required|string',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
 
+        $member = BoardMember::findOrFail($id);
+        
+        $data = [
+            'name' => $request->name,
+            'title' => $request->title,
+            'phone_number' => $request->phone_number,
+        ];
+
+        // Handle image upload if new image is provided
+        if ($request->hasFile('image')) {
+            // Delete old image if exists
+            if ($member->image && file_exists(public_path($member->image))) {
+                unlink(public_path($member->image));
+            }
+            
+            // Store new image (consistent with store method)
+            $file = $request->file('image');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('assets/img/team'), $filename);
+            $data['image'] = 'assets/img/team/' . $filename;
+        }
+        
+        $member->update($data);
+        
+        return redirect()->route('boardmembers.index')
+                    ->with('success', 'Board member updated successfully');
+    }
     /**
      * Remove the specified resource from storage.
      */
