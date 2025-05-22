@@ -8,11 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class BoardMember extends Model
 {
     use HasFactory;
-
-    protected $fillable = [
-        'name',
-        'title',
-        'phone_number',
-        'image'
-    ];
+    protected $fillable = ['name', 'title', 'bio', 'image'];
 }

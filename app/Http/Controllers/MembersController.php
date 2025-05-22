@@ -32,24 +32,24 @@ class MembersController extends Controller
         $request->validate([
             'name' => 'required|string',
             'title' => 'required|string',
-            'phone_number' => 'required|string',
+            'bio' => 'required|string',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
-    
+
         // Handle image upload
         if ($request->hasFile('image')) {
             $file = $request->file('image');
             $filename = time() . '_' . $file->getClientOriginalName();
             $file->move(public_path('assets/img/team'), $filename);
         }
-    
+
         BoardMember::create([
             'name' => $request->name,
             'title' => $request->title,
-            'phone_number' => $request->phone_number,
+            'bio' => $request->bio,
             'image' => 'assets/img/team/' . $filename,
         ]);
-    
+
         return redirect()->back()->with('success', 'Board member added successfully!');
     }
 
@@ -74,12 +74,13 @@ class MembersController extends Controller
     /**
      * Update the specified resource in storage.
      */
+
     public function update(Request $request, $id)
     {
         $request->validate([
             'name' => 'required|string',
             'title' => 'required|string',
-            'phone_number' => 'required|string',
+            'bio' => 'required|string',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
@@ -88,17 +89,15 @@ class MembersController extends Controller
         $data = [
             'name' => $request->name,
             'title' => $request->title,
-            'phone_number' => $request->phone_number,
+            'bio' => $request->bio,
         ];
 
         // Handle image upload if new image is provided
         if ($request->hasFile('image')) {
-            // Delete old image if exists
             if ($member->image && file_exists(public_path($member->image))) {
                 unlink(public_path($member->image));
             }
             
-            // Store new image (consistent with store method)
             $file = $request->file('image');
             $filename = time() . '_' . $file->getClientOriginalName();
             $file->move(public_path('assets/img/team'), $filename);

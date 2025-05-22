@@ -1,5 +1,5 @@
 <!-- Sidebar -->
-<ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
+<ul class="navbar-nav bg-emerald sidebar sidebar-dark accordion" id="accordionSidebar">
 
 <!-- Sidebar - Brand -->
 <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard">
@@ -52,6 +52,14 @@
 
   </li>
 
+
+  <style>
+    .bg-emerald {
+    background-color: #50C878 !important; /* Emerald Green */
+    background-image: none !important; /* Remove Bootstrap's gradient if using 'bg-gradient-*' */
+}
+
+  </style>
 </ul>
 
 

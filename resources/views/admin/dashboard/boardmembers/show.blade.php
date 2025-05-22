@@ -27,15 +27,16 @@
                 </div>
             </div>
             
-            <!-- Phone Number Row -->
+                <!-- Bio Row -->
             <div class="row mb-3">
                 <div class="col-12">
                     <div class="form-group">
-                        <label class="font-weight-bold">Phone Number:</label>
-                        <p class="form-control-plaintext border-bottom pb-2">{{ $member->phone_number }}</p>
+                        <label class="font-weight-bold">Bio:</label>
+                        <p class="form-control-plaintext border-bottom pb-2">{{ $member->bio }}</p>
                     </div>
                 </div>
             </div>
+
             
             <!-- Image Row -->
             <div class="row mb-3">

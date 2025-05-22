@@ -36,7 +36,7 @@
                         <th>#</th>
                         <th>Name</th>
                         <th>Title</th>
-                        <th>Phone Number</th>
+                        <th>Bio</th>
                         <th>Image</th>
                         <th>Action</th>
                     </tr>
@@ -47,7 +47,7 @@
                         <td>{{ $index + 1 }}</td>
                         <td>{{ $member->name }}</td>
                         <td>{{ $member->title }}</td>
-                        <td>{{ $member->phone_number }}</td>
+                        <td>{{ \Illuminate\Support\Str::limit($member->bio, 90, '...') }}</td>
                         <td><img src="{{ asset($member->image) }}" class="img-thumbnail" width="80"></td>
                         <td>
                                 <a href="{{ route('boardmembers.show', $member->id) }}" class="btn btn-success btn-sm">
@@ -100,10 +100,10 @@
                         <input type="text" id="title" name="title" class="form-control" placeholder="e.g. Chairperson" required>
                     </div>
 
-                    <!-- Phone -->
+                    <!-- Bio -->
                     <div class="form-group">
-                        <label for="phone_number">Phone Number*</label>
-                        <input type="text" id="phone_number" name="phone_number" class="form-control" placeholder="+256..." required>
+                        <label for="bio">Bio*</label>
+                        <textarea id="bio" name="bio" class="form-control" rows="3" placeholder="Write a short bio..." required></textarea>
                     </div>
 
                     <!-- Image -->

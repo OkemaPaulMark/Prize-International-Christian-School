@@ -11,8 +11,8 @@
     <!-- Styles -->
     <style>
         :root {
-            --primary: #198754;
-            --primary-dark: #198754;
+            --primary: #50c878;
+            --primary-dark: #50c878;
             --secondary: #6c757d;
             --light: #f8f9fc;
             --white: #ffffff;
@@ -38,7 +38,7 @@
         }
 
         .login-left {
-            background: linear-gradient(rgba(40, 167, 69, 0.85), rgba(40, 167, 69, 0.85)),
+            background: linear-gradient(rgba(80, 200, 120, 0.85), rgba(80, 200, 120, 0.85)),
                         url('https://images.unsplash.com/photo-1571260899304-425eee4c7efc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;

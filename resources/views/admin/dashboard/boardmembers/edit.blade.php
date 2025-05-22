@@ -43,14 +43,13 @@
                     </div>
                 </div>
                 
-                <!-- Phone Number Row -->
+                <!-- Bio Row -->
                 <div class="row mb-3">
                     <div class="col-12">
                         <div class="form-group">
-                            <label class="font-weight-bold">Phone Number*</label>
-                            <input type="text" name="phone_number" class="form-control @error('phone_number') is-invalid @enderror" 
-                                   value="{{ old('phone_number', $member->phone_number) }}" required>
-                            @error('phone_number')
+                            <label class="font-weight-bold">Bio*</label>
+                            <textarea name="bio" class="form-control @error('bio') is-invalid @enderror" rows="4" required>{{ old('bio', $member->bio) }}</textarea>
+                            @error('bio')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
@@ -58,7 +57,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Image Row -->
                 <div class="row mb-3">
                     <div class="col-12">
