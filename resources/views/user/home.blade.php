@@ -55,7 +55,7 @@
 
     @include('user/sections.team')
 
-    @include('user/sections.faq')
+
 
     @include('user/sections.testimonials')
 

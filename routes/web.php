@@ -32,5 +32,10 @@ Route::resource('boardmembers', MembersController::class);
 
 Route::resource('feedback', FeedbackController::class)->only(['store']);
 
+Route::get('/faqs', function () {
+    return view('user.sections.faqs');
+})->name('faqs');
+
+
 
 require __DIR__.'/auth.php';

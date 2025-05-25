@@ -12,7 +12,7 @@ class MembersController extends Controller
      */
     public function index()
     {
-        $members = BoardMember::all();
+        $members = BoardMember::paginate(7); 
         return view('admin.dashboard.boardmembers.index', compact('members'));
     }
 
