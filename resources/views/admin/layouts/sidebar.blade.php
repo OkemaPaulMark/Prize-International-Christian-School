@@ -50,6 +50,14 @@
   </a>
 </li>
 
+<!-- Manage Staff Members -->
+<li class="nav-item">
+  <a class="nav-link" href="{{ route('staff.index') }}">
+    <i class="fas fa-chalkboard-teacher"></i> <!-- Icon for board/teaching roles -->
+    <span>Manage Staff Members</span>
+  </a>
+</li>
+
   </li>
 
 

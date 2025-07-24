@@ -17,6 +17,7 @@
           <li><a href="{{ url('/faqs') }}">FAQs</a></li>
           <li><a href="{{ url('/#newsletter') }}">Newsletter</a></li>
           <li><a href="{{ url('/#team') }}">Members</a></li>
+          <li><a href="{{ url('/staffs') }}">Staffs</a></li>
           <li><a href="{{ url('/#contact') }}">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

@@ -41,12 +41,12 @@
             <div class="testimonial-content">
               <p>
                  <i class="bi bi-quote quote-icon text-warning"></i>
-                My daughter has grown both academically and spiritually at this school. The teachers are dedicated and caring, and the environment is always encouraging.
+                Prior to joining Prize, 7-year old Kyra, had not memorized even one scripture verse. What a pleasant surprise it was to her Mom when after one month, she recited Matthew 6:19-24, a whole six verses at once!!! We are so delighted that Kyra is memorizing scripture, adding weapons to her armory.
               </p>
             </div>
             <div class="testimonial-profile">
               <div class="profile-info">
-                <h5 class="text-success">Grace Nakato</h5>
+                <h5 class="text-success">Scripture memorization</h5>
                 <span class="text-secondary">Parent</span>
               </div>
             </div>
@@ -58,69 +58,17 @@
             <div class="testimonial-content">
               <p>
                  <i class="bi bi-quote quote-icon text-warning"></i>
-                Sports Day was a highlight this term! It taught our children the value of teamwork, discipline, and healthy competition. Well organized and fun for everyone.
+                During the Term 2 week of prayer and fasting, 10-year old Amani initially struggled and decided to skip the first day of fasting. However, by God’s grace he managed to join in for the remaining four days. During the next Friday when his learning center decided to fast, he enthusiastically joined in. Furthermore, the following Tuesday he decided to spend personal time praying and fasting. As a school, we celebrate Amani for this growth in seeking God's interventions because God rewards those who diligently seek Him.
               </p>
             </div>
             <div class="testimonial-profile">
               <div class="profile-info">
-                <h5 class="text-success">Peter Okello</h5>
+                <h5 class="text-success">Increased Hunger for God</h5>
                 <span class="text-secondary">Parent</span>
               </div>
             </div>
           </div>
         </div><!-- End testimonial item -->
-
-        <div class="swiper-slide">
-          <div class="testimonial-card" style="border: 1px solid #ccc; border-radius: 15px; padding: 20px;">
-            <div class="testimonial-content">
-              <p>
-                 <i class="bi bi-quote quote-icon text-warning"></i>
-                As a student, I really enjoyed MDD Day. It gave us a chance to express ourselves creatively through dance, drama, and music. It was one of my best days in school!
-              </p>
-            </div>
-            <div class="testimonial-profile">
-              <div class="profile-info">
-                <h5 class="text-success">Sharon Aanyu</h5>
-                <span class="text-secondary">Student</span>
-              </div>
-            </div>
-          </div>
-        </div><!-- End testimonial item -->
-
-        <div class="swiper-slide">
-          <div class="testimonial-card" style="border: 1px solid #ccc; border-radius: 15px; padding: 20px;">
-            <div class="testimonial-content">
-              <p>
-                 <i class="bi bi-quote quote-icon text-warning"></i>
-                The Prayer Day held before exams really helped us focus and feel spiritually uplifted. It reminded us that God is at the center of everything we do and lets keep this up.
-              </p>
-            </div>
-            <div class="testimonial-profile">
-              <div class="profile-info">
-                <h5 class="text-success">Rev. Samuel Mugisha</h5>
-                <span class="text-secondary">Guest Speaker</span>
-              </div>
-            </div>
-          </div>
-        </div><!-- End testimonial item -->
-
-        <div class="swiper-slide">
-          <div class="testimonial-card" style="border: 1px solid #ccc; border-radius: 15px; padding: 20px;">
-            <div class="testimonial-content">
-              <p>
-                 <i class="bi bi-quote quote-icon text-warning"></i>
-                The end of term party was such a joyful way to wrap up the term. The students danced, shared gifts, and celebrated their hard work. I’m grateful for the school’s efforts.
-              </p>
-            </div>
-            <div class="testimonial-profile">
-              <div class="profile-info">
-                <h5 class="text-success">Jackline Namubiru</h5>
-                <span class="text-secondary">Teacher</span>
-              </div>
-            </div>
-          </div>
-        </div><!-- End testimonial item -->
-
       </div>
 
       <!-- Move the pagination below the cards -->

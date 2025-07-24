@@ -8,6 +8,8 @@ use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\MembersController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\StaffController;
+use App\Models\Staff;
 
 Route::get('/', [UserController::class, 'index']);
 // Route::get('/dashboard', function () {
@@ -32,9 +34,16 @@ Route::resource('boardmembers', MembersController::class);
 
 Route::resource('feedback', FeedbackController::class)->only(['store']);
 
+Route::resource('staff', StaffController::class);
+
 Route::get('/faqs', function () {
     return view('user.sections.faqs');
 })->name('faqs');
+
+Route::get('/staffs', function () {
+    $staff = Staff::all();
+    return view('user.sections.staffs', compact('staff'));
+})->name('staffs');
 
 
 

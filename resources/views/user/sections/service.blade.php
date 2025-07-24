@@ -15,11 +15,11 @@
       <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
         <div class="service-card position-relative">
           <div class="service-img">
-            <img src="assets/img/services/daycare.jpg" alt="Daycare Service" class="img-fluid">
+            <img src="assets/img/services/grade1_12.png" alt="Daycare Service" class="img-fluid">
           </div>
           <div class="service-content">
-            <h3 class = "text-success">Daycare</h3>
-            <p>Safe and nurturing environment for your little ones with age-appropriate activities, early learning programs, and caring supervision.</p>
+            <h3 class = "text-success">Grades 1 to 12</h3>
+            <p>Our students learn using the Accelerated Christian Education (A.C.E.) curriculum, an individualized and mastery-based system that allows each learner to progress at their own pace. Spanning from Grade 1 to Grade 12, students build strong academic foundations while growing spiritually and personally.</p>
           </div>
         </div>
       </div><!-- End Service Item -->
@@ -28,11 +28,11 @@
       <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
         <div class="service-card position-relative">
           <div class="service-img">
-            <img src="assets/img/services/kindergaten.webp" alt="K-12 Education" class="img-fluid">
+            <img src="assets/img/services/daycare.png" alt="K-12 Education" class="img-fluid">
           </div>
           <div class="service-content">
-            <h3 class = "text-success">Kindergarten to 12th Grade</h3>
-            <p>Comprehensive academic curriculum with experienced educators, modern facilities, and holistic development programs.</p>
+            <h3 class = "text-success">Daycare (Ages 6 Months to 3 Years)</h3>
+            <p>We provide a safe, nurturing, and welcoming daycare environment for young children. Through guided play, they begin to explore the world around them and develop early cognitive and social skills in a loving Christian setting.</p>
           </div>
         </div>
       </div><!-- End Service Item -->
@@ -41,11 +41,11 @@
       <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
         <div class="service-card position-relative">
           <div class="service-img">
-            <img src="assets/img/services/vocational.jpg" alt="Vocational Training" class="img-fluid">
+            <img src="assets/img/services/music.png" alt="Vocational Training" class="img-fluid">
           </div>
           <div class="service-content">
-            <h3 class = "text-success">Vocational Training</h3>
-            <p>Practical skill development programs in various trades to prepare students for career opportunities and professional success.</p>
+            <h3 class = "text-success">Music and Dance</h3>
+            <p>Music and dance is an integral part of life at Prize. Our students learn to play instruments, rehearse regularly, and participate in school assemblies, local church ministry, and missions. These activities enhance memory, creativity, focus, and confidence.</p>
           </div>
         </div>
       </div><!-- End Service Item -->
@@ -54,11 +54,11 @@
       <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
         <div class="service-card position-relative">
           <div class="service-img">
-            <img src="assets/img/services/music.jpg" alt="Music Lessons" class="img-fluid">
+            <img src="assets/img/services/volleyball.png" alt="Music Lessons" class="img-fluid">
           </div>
           <div class="service-content">
-            <h3 class = "text-success">Music Lessons</h3>
-            <p>Expert instruction in various instruments and vocal training for all skill levels, fostering creativity and musical expression.</p>
+            <h3 class = "text-success">Volleyball</h3>
+            <p>We encourage physical activity through volleyball, where students enjoy a balance of fitness, teamwork, and fun.</p>
           </div>
         </div>
       </div><!-- End Service Item -->
@@ -67,11 +67,11 @@
       <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
         <div class="service-card position-relative">
           <div class="service-img">
-            <img src="assets/img/services/sports.jpg" alt="Sports Academy" class="img-fluid">
+            <img src="assets/img/services/swimming.png" alt="Sports Academy" class="img-fluid">
           </div>
           <div class="service-content">
-            <h3 class = "text-success">Sports Academy</h3>
-            <p>Professional coaching in various sports disciplines, focusing on skill development, teamwork, and physical fitness.</p>
+            <h3 class = "text-success">Swimming</h3>
+            <p>Swimming is both a recreational and fitness activity at Prize. Students swim regularly, building endurance, coordination, and confidence in the water.</p>
           </div>
         </div>
       </div><!-- End Service Item -->
@@ -80,11 +80,11 @@
       <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
         <div class="service-card position-relative">
           <div class="service-img">
-            <img src="assets/img/services/after.jpg" alt="After School Programs" class="img-fluid">
+            <img src="assets/img/services/chess.png" alt="After School Programs" class="img-fluid">
           </div>
           <div class="service-content">
-            <h3 class = "text-success">After School Programs</h3>
-            <p>Engaging extracurricular activities that complement academic learning and promote social development.</p>
+            <h3 class = "text-success">Chess Club</h3>
+            <p>Our active chess club helps students develop essential skills such as critical thinking, problem-solving, emotional regulation, and strategic planning. Chess supports academic success and strengthens social and emotional development.</p>
           </div>
         </div>
       </div><!-- End Service Item -->

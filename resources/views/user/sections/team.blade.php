@@ -19,7 +19,7 @@
           <div class="member-info">
             <h4>{{ $member->name }}</h4>
             <span>{{ $member->title }}</span>
-            <p>
+            <p class="text-start">
               {{ \Illuminate\Support\Str::limit($member->bio, 100, '...') }}
               <a href="#" data-bs-toggle="modal" data-bs-target="#bioModal{{ $index }}">Read More</a>
             </p>

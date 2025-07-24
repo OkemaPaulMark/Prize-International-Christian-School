@@ -45,16 +45,28 @@ class RegistereduserController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $user = User::findOrFail($id);
+        return view('admin.dashboard.users.edit', compact('user'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, string $id)
-    {
-        //
-    }
+        {
+            $request->validate([
+                'name' => 'required|string|max:255',
+                'email' => 'required|email|unique:users,email,' . $id,
+                'role' => 'required|in:admin,user', // validate that role is either admin or user
+            ]);
+
+            $user = User::findOrFail($id);
+            $user->name = $request->name;
+            $user->email = $request->email;
+            $user->role = $request->role;
+            $user->save();
+
+            return redirect()->route('users.index')->with('success', 'User updated successfully.');
+        }
+
+
 
     /**
      * Remove the specified resource from storage.

@@ -37,6 +37,7 @@
                         <th>#</th>
                         <th>Username</th>
                         <th>Email</th>
+                        <th>Role</th>
                         <th>Created At</th>
                         <th>Action</th>
                     </tr>
@@ -47,8 +48,13 @@
                             <td>{{ $index + 1 }}</td>
                             <td>{{ $user->name }}</td> {{-- or $user->username if you have a username field --}}
                             <td>{{ $user->email }}</td>
+                            <td>{{ $user->role }}</td>
                             <td>{{ $user->created_at->format('Y-m-d') }}</td>
                             <td>
+
+                                <a href="{{ route('users.edit', $user->id) }}" class="btn btn-warning btn-sm">
+                                    <i class="fas fa-edit"></i> Edit
+                                </a>
                                 <form action="{{ route('users.destroy', $user->id) }}" method="POST" style="display:inline;">
                                     @csrf
                                     @method('DELETE')
